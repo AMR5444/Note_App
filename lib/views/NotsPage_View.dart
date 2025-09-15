@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test/views/Add_Note_Bottom_Sheet.dart';
 import 'package:test/views/Widget/NotsView_body.dart';
 
 class NotspageView extends StatelessWidget {
@@ -8,7 +9,14 @@ class NotspageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            builder: (context) {
+              return AddNoteBottomSheet();
+            },
+          );
+        },
         child: Icon(Icons.add),
       ),
       body: NotsViewBody(),

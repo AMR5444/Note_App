@@ -27,7 +27,7 @@ class NoteAItem extends StatelessWidget {
                 'Build Your Career With Amr Hamdan',
                 style: TextStyle(
                   color: Colors.black.withOpacity(0.4),
-                  fontSize: 18,
+                  fontSize: 16,
                 ),
               ),
             ),
