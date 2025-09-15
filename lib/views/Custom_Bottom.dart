@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test/views/Widget/Constants.dart';
 
 class CustomButtom extends StatelessWidget {
   CustomButtom({Key? key, this.onTap, required this.text}) : super(key: key);
@@ -13,15 +14,19 @@ class CustomButtom extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.blueAccent,
+          color: KPrimaryColor,
           borderRadius: BorderRadius.circular(8),
         ),
-        width: double.infinity,
-        height: 60,
+        width: MediaQuery.of(context).size.width,
+        height: 55,
         child: Center(
           child: Text(
             text,
-            style: TextStyle(color: Color(0xff62FCD7), fontSize: 14),
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),

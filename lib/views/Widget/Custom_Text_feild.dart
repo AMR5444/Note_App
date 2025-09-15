@@ -8,11 +8,11 @@ class CustomTextField extends StatelessWidget {
     this.inputType,
     this.onChanged,
     this.hintText,
-    this.maxlength = 1,
+    this.maxLiens = 1,
   }) : super(key: key);
   final String? hintText;
   Function(String)? onChanged;
-  final int maxlength;
+  final int maxLiens;
   TextInputType? inputType;
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class CustomTextField extends StatelessWidget {
       cursorColor: KPrimaryColor,
       keyboardType: inputType,
       onChanged: onChanged,
-      maxLength: maxlength,
+      maxLines: maxLiens,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: const TextStyle(color: KPrimaryColor, fontSize: 14),
