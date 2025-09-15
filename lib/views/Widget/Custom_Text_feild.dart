@@ -8,20 +8,19 @@ class CustomTextField extends StatelessWidget {
     this.inputType,
     this.onChanged,
     this.hintText,
-    this.obscureText = false,
+    this.maxlength = 1,
   }) : super(key: key);
   final String? hintText;
   Function(String)? onChanged;
-  final bool? obscureText;
-
+  final int maxlength;
   TextInputType? inputType;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       cursorColor: KPrimaryColor,
-      obscureText: obscureText!,
       keyboardType: inputType,
       onChanged: onChanged,
+      maxLength: maxlength,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: const TextStyle(color: KPrimaryColor, fontSize: 14),
