@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test/views/Widget/Eidt_View_Body.dart';
+import 'package:test/views/Eidt_NotePage.dart';
 
 class NoteAItem extends StatelessWidget {
   const NoteAItem({super.key});
@@ -12,7 +12,7 @@ class NoteAItem extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return EidtViewBody();
+              return EidtNotepage();
             },
           ),
         );
