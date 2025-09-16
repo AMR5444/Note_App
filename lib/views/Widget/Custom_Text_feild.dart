@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:test/views/Widget/Constants.dart';
-import 'package:test/views/Widget/Custom_Serch_Icon.dart';
 
 class CustomTextField extends StatelessWidget {
   CustomTextField({
-    Key? key,
+    super.key,
     this.inputType,
     this.onChanged,
     this.hintText,
     this.maxLiens = 1,
-  }) : super(key: key);
+  });
   final String? hintText;
   Function(String)? onChanged;
   final int maxLiens;

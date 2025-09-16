@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:test/views/Widget/Constants.dart';
 
 class CustomButtom extends StatelessWidget {
-  CustomButtom({Key? key, this.onTap, required this.text}) : super(key: key);
+  CustomButtom({super.key, this.onTap, required this.text});
 
   final String text;
 
