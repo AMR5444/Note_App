@@ -25,9 +25,12 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
   assets:
-    - assets/fonts/
+    - android/assets/fonts/Poppins-Regular.ttf
+
   fonts:
     - family: Poppins
       fonts:
-        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: android/assets/fonts/Poppins-Regular.ttf
+

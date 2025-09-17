@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:test/views/Widget/Constants.dart';
 
-class CustomButtom extends StatelessWidget {
-  CustomButtom({super.key, this.onTap, required this.text});
+class customButtom extends StatelessWidget {
+  customButtom({super.key, this.onTap, required this.text});
 
   final String text;
 
