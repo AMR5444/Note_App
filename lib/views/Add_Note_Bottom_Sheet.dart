@@ -10,8 +10,8 @@ class AddNoteBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => NotesCubit(),
-      child: BlocConsumer<NotesCubit, NotesState>(
+      create: (context) => addNotesCubit(),
+      child: BlocConsumer<addNotesCubit, NotesState>(
         listener: (context, state) {
           if (state is NotesFaliure) {
             print('filier ${state.errorMessage}');

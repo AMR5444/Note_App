@@ -49,7 +49,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             maxLiens: 5,
           ),
           SizedBox(height: 32),
-          BlocBuilder<NotesCubit, NotesState>(
+          BlocBuilder<addNotesCubit, NotesState>(
             builder: (context, state) {
               return customButtom(
                 isLoding: state is NotesLoding ? true : false,
@@ -62,7 +62,8 @@ class _AddNoteFormState extends State<AddNoteForm> {
                         supTitle: supTitle!,
                         date: DateTime.now().toString(),
                         color: Colors.blue.value);
-                    BlocProvider.of<NotesCubit>(context).addNote(noteModales);
+                    BlocProvider.of<addNotesCubit>(context)
+                        .addNote(noteModales);
                   } else {
                     autovalidateMode = AutovalidateMode.always;
                     setState(() {});
