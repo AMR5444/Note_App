@@ -15,7 +15,6 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   modal_progress_hud_nsn: ^0.5.1
- 
   
 
 dev_dependencies:
@@ -28,8 +27,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/fonts/
+    - android/assets/fonts/Poppins-Regular.ttf
   fonts:
     - family: Poppins
       fonts:
-        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: android/assets/fonts/Poppins-Regular.ttf
