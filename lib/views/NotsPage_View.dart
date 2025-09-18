@@ -11,6 +11,7 @@ class NotspageView extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: true,
             shape: BeveledRectangleBorder(
               borderRadius: BorderRadius.circular(16),
             ),
