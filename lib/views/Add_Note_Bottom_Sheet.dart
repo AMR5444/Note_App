@@ -10,8 +10,8 @@ class AddNoteBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => addNotesCubit(),
-      child: BlocConsumer<addNotesCubit, NotesState>(
+      create: (context) => AddNotesCubit(),
+      child: BlocConsumer<AddNotesCubit, NotesState>(
         listener: (context, state) {
           if (state is NotesFaliure) {
             print('filier ${state.errorMessage}');
@@ -28,7 +28,7 @@ class AddNoteBottomSheet extends StatelessWidget {
                   right: 16,
                   left: 16,
                   bottom: MediaQuery.of(context).viewInsets.bottom),
-              child: SingleChildScrollView(child: AddNoteForm()),
+              child: SingleChildScrollView(child: addNoteForm()),
             ),
           );
         },

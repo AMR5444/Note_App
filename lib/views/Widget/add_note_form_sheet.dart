@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test/cubits/add_notes_cubit/add_notes_cubit.dart';
 import 'package:test/models/note_model.dart';
 import 'package:test/views/Widget/Custom_Bottom.dart';
 import 'package:test/views/Widget/Custom_Text_feild.dart';
 
-class AddNoteForm extends StatefulWidget {
+class addNoteForm extends StatefulWidget {
   var supTitle;
   var title;
 
-  AddNoteForm({
+  addNoteForm({
     super.key,
     this.supTitle,
     this.title,
   });
 
   @override
-  State<AddNoteForm> createState() => _AddNoteFormState();
+  State<addNoteForm> createState() => _addNoteFormState();
 }
 
-class _AddNoteFormState extends State<AddNoteForm> {
+class _addNoteFormState extends State<addNoteForm> {
   final GlobalKey<FormState> formkey = GlobalKey();
 
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
@@ -49,7 +49,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             maxLiens: 5,
           ),
           SizedBox(height: 32),
-          BlocBuilder<addNotesCubit, NotesState>(
+          BlocBuilder<AddNotesCubit, NotesState>(
             builder: (context, state) {
               return customButtom(
                 isLoding: state is NotesLoding ? true : false,
@@ -62,7 +62,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                         supTitle: supTitle!,
                         date: DateTime.now().toString(),
                         color: Colors.blue.value);
-                    BlocProvider.of<addNotesCubit>(context)
+                    BlocProvider.of<AddNotesCubit>(context)
                         .addNote(noteModales);
                   } else {
                     autovalidateMode = AutovalidateMode.always;
