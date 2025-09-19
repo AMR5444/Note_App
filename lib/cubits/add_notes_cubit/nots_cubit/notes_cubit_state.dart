@@ -10,3 +10,5 @@ final class NotesLoaded extends NotesCubitState {
 
   NotesLoaded(this.notes);
 }
+
+final class NotesCubiSuccsess extends NotesCubitState {}
