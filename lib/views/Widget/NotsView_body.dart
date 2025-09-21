@@ -18,6 +18,8 @@ class _NotsViewBodyState extends State<NotsViewBody> {
     super.initState();
   }
 
+  void Function()? onPressed;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -25,7 +27,11 @@ class _NotsViewBodyState extends State<NotsViewBody> {
       child: Column(
         children: [
           SizedBox(height: 10),
-          const CustomAppBar(title: 'Notes', icon: Icons.search),
+          CustomAppBar(
+            title: 'Notes',
+            icon: Icons.search,
+            onPressed: onPressed,
+          ),
           Expanded(child: NotesListView()),
         ],
       ),

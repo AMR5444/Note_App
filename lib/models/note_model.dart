@@ -5,13 +5,13 @@ part 'note_model.g.dart';
 @HiveType(typeId: 0)
 class NoteModels extends HiveObject {
   @HiveField(0)
-  final String title;
+  String title;
   @HiveField(1)
-  final String supTitle;
+  String supTitle;
   @HiveField(2)
   final String date;
   @HiveField(3)
-  final int color;
+  int color;
 
   NoteModels({
     required this.title,
