@@ -26,6 +26,7 @@ class _addNoteFormState extends State<addNoteForm> {
 
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   String? title, supTitle;
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -49,7 +50,6 @@ class _addNoteFormState extends State<addNoteForm> {
             },
             maxLiens: 5,
           ),
-          ColorItem(),
           ColorsListview(),
           SizedBox(height: 32),
           BlocBuilder<AddNotesCubit, NotesState>(
