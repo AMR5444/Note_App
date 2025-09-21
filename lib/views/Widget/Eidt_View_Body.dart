@@ -4,6 +4,7 @@ import 'package:test/cubits/add_notes_cubit/nots_cubit/notes_cubit_cubit.dart';
 import 'package:test/models/note_model.dart';
 import 'package:test/views/Widget/Custom_AppBar.dart';
 import 'package:test/views/Widget/Custom_Text_feild.dart';
+import 'package:test/views/Widget/edit_note_colorsList.dart';
 
 class EidtViewBody extends StatefulWidget {
   EidtViewBody({
@@ -59,6 +60,9 @@ class _EidtViewBodyState extends State<EidtViewBody> {
             },
             hintText: widget.note.supTitle,
             maxLiens: 5,
+          ),
+          EidtNoteColorsList(
+            note: widget.note,
           ),
         ],
       ),
